@@ -9,6 +9,17 @@ app.get('/', async (_req, res) => {
       message: `Server is running on port ${PORT}`,
   });
 });
+
+app.post("/test", async (req, res) => {
+
+  let data = req.body;
+  
+  res.send(data)
+  console.log("post");
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
